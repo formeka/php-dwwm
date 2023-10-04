@@ -1,53 +1,22 @@
 <?php
-// phpinfo();
 require './fonctions.php';
 
-$titre = "Operateurs php";
+$titre = "Tableaux php";
 
-/*
-operateurs
-+
--
-*
-/
-**
-%
-*/
+$tab1 = [];
+$notes = [12,14,6,10];
 
-$x = 4;
-$y = 2;
-$z = 5;
+$tab1[] = 'Janvier';
+$tab1[] = 45;
+$tab1[] = true;
 
-// $calcul = $x % $y;
-// $calcul = ($x + $z) * $y;
+array_push($tab1, 'Voiture', 10.5, [45,true,'Truc']);
 
-// $x += 5; // $x = $x + 5
-// $x -= 5; // $x = $x - 5
-// $x *= 5; // $x = $x * 5
-// $x /= 5; // $x = $x / 5
-// $x **= 5; // $x = $x ** 5
-// $x %= 5; // $x = $x % 5
+$tabFusion = array_merge($tab1,$notes);
 
-// dd($x);
+dbug($tabFusion);
 
-// $i = 0;
-// $i++; // $i = $i + 1; $i += 1;
-
-// $i--; // $i = $i - 1; $i -= 1;
-
-// dd($i);
-
-// $anneeDeNaissance = 1990;
-// $age = date("Y") - $anneeDeNaissance;
-// dd($age);
-
-// Calcule le prix TTC 
-$prixHT = 34;
-$tva = 10;
-
-$prixTTC = $prixHT + ($tva * $prixHT) / 100;
-
-dd($prixTTC);
+dd($tabFusion[5][2]);
 
 
 require './index.view.php';
