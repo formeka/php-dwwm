@@ -1,13 +1,54 @@
 <?php
 
-include('./header.php');
+// include './header.php';
+// include_once './header.php';
 
+require './header.php';
+
+// Un commentaire
+/* 
+un
+commentaire
+sur plusieurs
+lignes
+*/
 
 echo "<h1>Ceppic PHP</h1>";
-?>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci dicta non nostrum totam ullam expedita, blanditiis id? Ipsa officiis delectus consequuntur ut inventore animi cupiditate, qui pariatur impedit illum.</p>
+$variable = 'une variable';
+$Variable = 'Une Variable';
 
-<?php
-echo "Encore Ceppic PHP";
-?>
+// echo $variable , $Variable;
+// echo $variable . $Variable;
+// echo $variable . " " . $Variable;
+// echo $variable . ' ' . $Variable;
+// echo "$variable";
+// echo '$variable';
+// echo "$variable . $Variable";
+// echo '$variable . $Variable';
+
+/* $camelCase = 'une variable en camel case';
+$snake_case = 'une variable en snake case';
+// $kebab-case = 'une variable en kebab case';
+$PascalCase = 'une variable en pascal case'; */
+
+$nombre = 45;
+$nombreDecimale = 10.5;
+$booleen = false;
+
+// print_r($nombre);
+// var_dump($nombre);
+// var_dump($nombreDecimale);
+// var_dump($booleen);
+// var_dump($variable);
+// print_r($variable);
+
+$fruit1 = 'pomme';
+$fruit2 = 'banane';
+
+echo "<p>$fruit1 <br> $fruit2</p>";
+echo "<p>$fruit1" . "<br>" . "$fruit2</p>";
+echo '<p>' . $fruit1 . '<br>' . $fruit2 .'</p>';
+
+
+require './footer.php';
