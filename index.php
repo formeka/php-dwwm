@@ -71,8 +71,16 @@ $tableau = [
     [1, 2, 3,true]
 ];
 
-dd($tableau);
-dbug($titre);
+// dd($tableau);
+// dbug($titre);
+
+define('USER', 'Jon Doe');
+define('NOTES', [12,16,2,6]);
+define('ONLINE', true);
+define('AGE', 32);
+
+dd(AGE);
+
 ?>
 <!-- <h3><?//= $titre ?></h3> -->
 
