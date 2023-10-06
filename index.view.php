@@ -11,7 +11,7 @@
     <h1><?= $titre ?></h1>
     <?php
 
-    dbug($planetes2);
+    // dbug($planetes2);
 
     /* foreach($planetes as $planete) {
     echo ucwords($planete) . '<br>';
@@ -21,7 +21,7 @@
     //     echo ucwords($tralala) . '<br>';
     // }
 
-    foreach ($planetes as $clef => $valeur) {
+    /* foreach ($planetes as $clef => $valeur) {
         echo $clef . ' : ' . $valeur . '<br>';
     }
 
@@ -34,8 +34,13 @@
 
     foreach ($planetes2 as $clef => $valeur) :
         echo $clef . ' : ' . $valeur . '<br>';
-    endforeach;
+    endforeach; */
 
+    dbug($user);
+
+    foreach($user as $key => $value) :
+        echo $key . ' : ' . $value;
+    endforeach;
 
     ?>
 </body>
