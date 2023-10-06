@@ -20,4 +20,6 @@ $user = [
 
 // Afficher dans une liste ul toutes les données de ce user avec for each
 
+// if/else/elseif
+
 require './index.view.php';
