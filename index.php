@@ -96,6 +96,10 @@ $people = [
 ];
 
 
+// Afficher les phrases suivantes :
+// Le nom de Lucie est Dupond.
+// L'email de Michel MOURAD est moumi@caramail.com.
+
 
 
 
