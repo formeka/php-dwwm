@@ -7,15 +7,9 @@ $planetes = ['mars','terre','uranus','venus','jupiter','mercure'];
 $planetes2 = [
     'm' => 'mars',
     't' => 'terre',
-    'u' => 'uranus',
     'v' => 'venus',
     'j' => 'jupiter',
+    'u' => 'uranus',
 ];
 
-
-
-
-
-
-
-
+require './index.view.php';
