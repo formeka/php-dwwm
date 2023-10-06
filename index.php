@@ -1,7 +1,9 @@
 <?php
 require './fonctions.php';
 
-$titre = "Tableaux php";
+// Tableau indexé
+
+/* $titre = "Tableaux php";
 
 $tab1 = [];
 $notes = [12,14,6,10];
@@ -16,7 +18,8 @@ $tabFusion = array_merge($tab1,$notes);
 
 dbug($tabFusion);
 
-dd($tabFusion[5][2]);
+dd($tabFusion[5][2]); */
 
+// Tableaux associatif
 
 require './index.view.php';
