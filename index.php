@@ -69,7 +69,7 @@ $tab[] = ['A', 'B', 'C'];
 $tab[] = ['Q', 'R', 'T'];
 $tab[] = ['E', 'U', 'P', 'I'];
 
-dbug($tab);
+// dbug($tab);
 
 // Ecrire le mot CEPPIC avec les lettres du tableau $tab
 
@@ -94,13 +94,16 @@ $people = [
         'email' => 'ludo@gimayle.com'
     ]
 ];
-
+dbug($people);
+// unset($people);
 
 // Afficher les phrases suivantes :
 // Le nom de Lucie est Dupond.
 // L'email de Michel MOURAD est moumi@caramail.com.
 
+dbug('Le nom de '. $people[2]['prenom'] . ' est ' . $people[2]['nom'] . '.');
+dbug("L'email de " . $people[1]['prenom'] . ' ' . strtoupper($people[1]['nom']) . ' est ' . $people[1]['email'] . '.');
 
-
+$jsonPeople = json_encode($people);
 
 //require './index.view.php';
