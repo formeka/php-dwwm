@@ -1,8 +1,11 @@
 <?php
 require './fonctions.php';
 
+<<<<<<< HEAD
 // Tableau indexé
 
+=======
+>>>>>>> 6c6f1736093e573f40d4a419ba7b628127bae8f4
 /* $titre = "Tableaux php";
 
 $tab1 = [];
