@@ -36,6 +36,8 @@
         echo $clef . ' : ' . $valeur . '<br>';
     endforeach; */
 
+// Afficher dans une liste ul toutes les données de ce user avec for each
+
     dbug($user);
 
     foreach($user as $key => $value) :
