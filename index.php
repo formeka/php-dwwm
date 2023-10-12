@@ -1,14 +1,3 @@
-<?php 
-require './fonctions.php'; 
-
-// dbug($_GET);
-// dbug($_POST);
-/* Afficher des phrase avec les informations du formulaire :
-    Votre nom est : 
-    Votre email est : 
-    ....
-*/
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,7 +9,7 @@ require './fonctions.php';
 
 <body>
     <h1>Formulaire</h1>
-    <form action="" method="POST">
+    <form action="./traitement.php" method="POST">
         <label for="nom">Nom :
         <input type="text" name="nom" placeholder="Votre nom">
         </label>
