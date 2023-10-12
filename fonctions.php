@@ -64,3 +64,16 @@ function dd($value)
 // }
 
 // echo calcul(2.6,5);
+
+$x = 6;
+$y = 3;
+
+function calcul($x)
+{
+    global $y;
+    $y = 7;
+    return $x + $y;
+}
+// echo calcul(5);
+echo calcul($x);
+dd($y);
