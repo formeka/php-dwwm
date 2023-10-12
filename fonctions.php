@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 function dbug($value)
 {
@@ -48,3 +49,18 @@ function dd($value)
 //     return $anneeEnCours - $anneNaissance;
 // }
 // echo calculAge(1990);
+
+// $calcul = function ($nb) {
+//     return $nb + 1;
+// };
+
+// echo $calcul(25);
+
+
+// function calcul(int | float $a , int | float $b): int | float
+// function calcul(int | float $a , int | float $b): mixed
+// {
+//     return $a + $b;
+// }
+
+// echo calcul(2.6,5);
