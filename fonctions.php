@@ -13,3 +13,14 @@ function dd($value)
     dbug($value);
     die('Script php arrété !!!');
 }
+
+function calcul($a , $b)
+{
+    // $c = $a + $b;
+    // return $c;
+    // echo 'Calcul';
+    return $a + $b;
+}
+
+echo calcul(10,12);
+
