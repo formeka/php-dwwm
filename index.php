@@ -57,7 +57,7 @@ endif; */
 //     echo 'La variable $b égale à 5';
 // endif;
 
-// $vrai = false;
+ $vrai = true;
 // $vrai = null;
 // if($vrai):
 //     echo 'Vrai';
@@ -71,6 +71,9 @@ endif; */
 // }
 
 // echo $vrai ? 'Vrai' : 'Faux';
+// echo $vrai ?: 'Vrai';
+// echo $truc ?? 'a is not set'; 
+//echo $vrai ?? 'Faux'; 
 
 // $votes = 7500;
 // dbug($votes);
@@ -78,7 +81,7 @@ endif; */
 // ($votes > $votesPrecedents) ? $votes-- : $votes++;
 // dbug($votes);
 
-$couleur = 'violet';
+// $couleur = 'violet';
 // switch ($couleur) {
 //     case 'rouge':
 //         echo 'Votre couleur favorite est le rouge';
@@ -93,11 +96,11 @@ $couleur = 'violet';
 //         echo 'Votre couleur favorite est ni le rouge,ni le blue,ni le vert';
 // }
 
-$return_value = match($couleur) {
-    'rouge' => 'Votre couleur favorite est le rouge',
-    'bleue' => 'Votre couleur favorite est le blue',
-    'vert' => 'Votre couleur favorite est le vert',
-    default => 'Votre couleur favorite est ni le rouge,ni le blue,ni le vert'
-};
+// $return_value = match($couleur) {
+//     'rouge' => 'Votre couleur favorite est le rouge',
+//     'bleue' => 'Votre couleur favorite est le blue',
+//     'vert' => 'Votre couleur favorite est le vert',
+//     default => 'Votre couleur favorite est ni le rouge,ni le blue,ni le vert'
+// };
 
-echo $return_value;
+// echo $return_value;
