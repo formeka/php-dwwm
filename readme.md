@@ -25,4 +25,4 @@ Et ajouter un fichier `.htaccess`
 
 # PDO
 
-[Documentation PDO](https://www.php.net/manual/fr/pdo.connections.php)
+[Documentation connection PDO](https://www.php.net/manual/fr/pdo.connections.php)
