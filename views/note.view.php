@@ -6,8 +6,8 @@
     <title>Notes</title>
 </head>
 <body>
-    <h1>Note</h1>
-
-    </ul>
+    <h2><?=$note['title']?></h2>
+    <p><?=$note['content']?></p>
+    <p><?=$note['created_at']?></p>
 </body>
 </html>
