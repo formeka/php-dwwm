@@ -20,3 +20,9 @@ Ajouter dans le fichier `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
 ```
 
 Et ajouter un fichier `.htaccess`
+
+---
+
+# PDO
+
+[Documentation PDO](https://www.php.net/manual/fr/pdo.connections.php)
