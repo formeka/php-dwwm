@@ -10,7 +10,7 @@
     <ul>
     <?php foreach($notes as $note) : ?>
         <li>
-            <a href="">
+            <a href="/note?id=<?=$note['id']?>">
                 <?=$note['title']?>
             </a>    
         </li>
