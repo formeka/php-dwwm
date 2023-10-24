@@ -7,5 +7,14 @@
 </head>
 <body>
     <h1>Notes</h1>
+    <ul>
+    <?php foreach($notes as $note) : ?>
+        <li>
+            <a href="">
+                <?=$note['title']?>
+            </a>    
+        </li>
+    <?php endforeach; ?>
+    </ul>
 </body>
 </html>
