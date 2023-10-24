@@ -6,6 +6,9 @@ LEs fichiers **php** se trouvent dans le dossier `c:/xampp/htdocs`
 
 [PHP documentation](https://www.php.net/manual/fr/)
 
+---
+
+Afin d'encapsuler notre application il faut :
 
 Ajouter dans le fichier `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
 
@@ -15,3 +18,5 @@ Ajouter dans le fichier `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
     ServerName phpnotes.com
 </VirtualHost>
 ```
+
+Et ajouter un fichier `.htaccess`
