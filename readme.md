@@ -26,3 +26,12 @@ Et ajouter un fichier `.htaccess`
 # PDO
 
 [Documentation connection PDO](https://www.php.net/manual/fr/pdo.connections.php)
+
+---
+
+## Ce qui faut savoir
+
+- Définition d'une route
+- Définition d'un controller
+- Définition d'une vue
+- Passer et récuper un paramétre à une route

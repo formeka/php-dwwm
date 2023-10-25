@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-</head>
-<body>
-    <h1>Notes</h1>
+<?php require 'partials/header.php' ?>
     <ul>
     <?php foreach($notes as $note) : ?>
         <li>
@@ -16,5 +8,4 @@
         </li>
     <?php endforeach; ?>
     </ul>
-</body>
-</html>
+    <?php require 'partials/footer.php' ?>
