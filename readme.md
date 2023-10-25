@@ -35,3 +35,5 @@ Et ajouter un fichier `.htaccess`
 - Définition d'un controller
 - Définition d'une vue
 - Passer et récuper un paramétre à une route
+- Sécurité : SQL Injection
+- Sécurité : Faille XSS
