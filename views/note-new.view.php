@@ -18,6 +18,15 @@
     </select>
     <input type="submit" value="Ajouter">
 </form>
-
+<?php
+if (isset($errors) && !empty($errors)) :
+    foreach ($errors as $error) :
+?>
+    <p class="error"><?=$error?></p>    
+    <!--<p class="error"><?//=$errors?></p>-->
+<?php
+        endforeach;
+endif;
+?>
 
 <?php require 'partials/footer.php' ?>
