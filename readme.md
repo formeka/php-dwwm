@@ -29,6 +29,10 @@ Et ajouter un fichier `.htaccess`
 
 ---
 
+[C.R.U.D](https://fr.wikipedia.org/wiki/CRUD#:~:text=selon%20les%20recommandations%20des%20projets,informations%20en%20base%20de%20donn%C3%A9es.)
+
+---
+
 ## Ce qui faut savoir
 
 - Définition d'une route
