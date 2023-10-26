@@ -4,12 +4,14 @@
 
 <form method="POST">
     <label for="title">Titre :</label>
-    <input type="text" name="title" id="title">
+    <input type="text" name="title" id="title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
     <label for="content">Contenu :</label>
-    <textarea name="content" id="content" cols="30" rows="10"></textarea>
-    <label for="user">Auteur :</label>
-    <select name="user" id="user">
+    <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] : '' ?></textarea>
+    <label for="author">Auteur :</label>
+    <select name="author" id="author">
+
         <option value="" selected></option>
+
         <?php foreach ($users as $user) : ?>
             <option value="<?= $user['user_id'] ?>">
                 <?= $user['name'] ?>
