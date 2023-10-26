@@ -9,11 +9,19 @@
     <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] : '' ?></textarea>
     <label for="author">Auteur :</label>
     <select name="author" id="author">
-
-        <option value="" selected></option>
+        <option value=""></option>
 
         <?php foreach ($users as $user) : ?>
-            <option value="<?= $user['user_id'] ?>">
+
+            <?=gettype($_POST['author'])?>
+            <?=gettype($user['user_id'])?>
+            
+            <option value="<?= $user['user_id'] ?>"
+           
+           <?php if ( isset($_POST['author']) && ($_POST['author'] == $user['user_id']) ):  ?>
+                    selected
+          <?php endif; ?> 
+            >
                 <?= $user['name'] ?>
             </option>
         <?php endforeach; ?>
