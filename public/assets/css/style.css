@@ -52,20 +52,31 @@ body {
     outline: none;
   }
 
-  
-input[type="submit"] {
+input[type="submit"] , .btn {
   background-color: blue;
   cursor: pointer;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
 }
 
+.btn:hover {
+  text-decoration: none;
+}
 
 select {
   display: block;
   margin: 0 0 1rem;
   border: solid 1px #ddd;
   border-radius: 6px;
-      color: #fff;
-    background-color: #ccc;
+  color: #fff;
+  background-color: #ccc;
 }
 
 .error {

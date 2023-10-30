@@ -18,9 +18,12 @@ FROM note AS n
 INNER JOIN user AS u 
 ON n.user_id = u.user_id
 WHERE n.id = :id');
+
 $note->bindParam(':id', $id);
+
 $note->execute();
-$note = $note->fetch(PDO::FETCH_ASSOC);
+
+$note = $note->fetch(); 
 
 if ( empty($note) || $note === false ) :
     abort();

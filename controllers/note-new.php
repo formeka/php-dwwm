@@ -2,7 +2,7 @@
 require 'models/Database.php';
 
 $requete = "SELECT user_id,name FROM user";
-$users = $connexion->query($requete)->fetchAll(PDO::FETCH_ASSOC);
+$users = $connexion->query($requete)->fetchAll();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     $errors = [];
@@ -50,13 +50,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
 
     if (empty($errors)) :
         $noteNew = $connexion->prepare('INSERT INTO note (title,content,user_id) VALUES (:title , :content , :user_id)');
-        $noteNew->bindValue(':title', $title);
-        $noteNew->bindValue(':content', $content);
-        $noteNew->bindValue(':user_id', $author);
+        
+        $noteNew->bindValue(':title', $title, PDO::PARAM_STR);
+        $noteNew->bindValue(':content', $content, PDO::PARAM_STR);
+        $noteNew->bindValue(':user_id', $author, PDO::PARAM_INT);
+        
         $noteNew->execute();
 
-        header('Location: /notes');
-        exit();
+        $lastInsertId = $connexion->lastInsertId();
+        if($lastInsertId) :
+            header('Location: /notes');
+            exit();
+        else:
+            abort();
+        endif;
     endif;
 
 endif;

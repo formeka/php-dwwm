@@ -8,7 +8,9 @@ endif;
 $id = $_GET['id'];
 
 $note = $connexion->prepare('DELETE FROM note WHERE id = :id');
-$note->bindParam(':id', $id);
+
+$note->bindParam(':id', $id, PDO::PARAM_INT);
+
 $note->execute();
 
 header('Location: /notes');
