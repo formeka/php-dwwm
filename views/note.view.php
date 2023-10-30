@@ -3,6 +3,8 @@
 <p><?= $note['content'] ?></p>
 <p>Publiée le <?= $note['created_at'] ?> par <strong><?= $note['name'] ?></strong></p>
 
+<p><a href="/note-update?id=<?=$note['id']?>" class="btn">Modifier cette article</a></p>
+
 <p><a href="/note-delete?id=<?=$note['id']?>" onClick="return confirm('Etes vous certain de vouloir supprimer cette note !?');" class="btn error">
 Supprimer cette note
 </a></p>
