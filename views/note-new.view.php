@@ -12,13 +12,15 @@
         <option value=""></option>
 
         <?php foreach ($users as $user) : ?>
-
-            <?=gettype($_POST['author'])?>
-            <?=gettype($user['user_id'])?>
             
             <option value="<?= $user['user_id'] ?>"
            
-           <?php if ( isset($_POST['author']) && ($_POST['author'] == $user['user_id']) ):  ?>
+           <?php 
+           if (isset($_POST['author'])) :
+            $author_id = (int) $_POST['author'];
+           endif;
+
+           if ( isset($author_id) && ($author_id === $user['user_id']) ):  ?>
                     selected
           <?php endif; ?> 
             >
