@@ -6,9 +6,6 @@ $users = $connexion->query($requete)->fetchAll();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     $errors = [];
-    //$errors = '';
-
-    dd($_POST);
 
     $title = trim(filter_var($_POST['title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $content = trim(filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
@@ -54,4 +51,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
 
 endif;
 
-include 'views/note-new.view.php';
+include 'views/note/note-new.view.php';

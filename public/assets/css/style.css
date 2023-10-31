@@ -53,11 +53,11 @@ body {
   }
 
 input[type="submit"] , .btn {
-  background-color: blue;
   cursor: pointer;
   color: #fff;
   font-family: inherit;
   font-size: inherit;
+  font-weight: bold;
   margin-right: 6px;
   margin-bottom: 6px;
   padding: 10px;
@@ -77,6 +77,14 @@ select {
   border-radius: 6px;
   color: #fff;
   background-color: #ccc;
+}
+
+.btn-norm {
+  background-color: blue;
+}
+
+.btn-supp {
+background-color: red;
 }
 
 .error {
@@ -102,4 +110,8 @@ table td {
 table th {
   border-bottom: solid 1px grey;
   padding-bottom: 1rem;
+}
+
+.dspflex {
+  display: flex;
 }

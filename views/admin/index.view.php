@@ -22,9 +22,9 @@
             <td><?= substr($note['content'],0, 20) . ' (...)' ?></td>
             <td><?= $note['name'] ?></td>
             <td>
-                <a href="/note?id=<?=$note['id']?>" class="btn">Voir</a>
-                <a href="/note-update?id=<?=$note['id']?>" class="btn">Modifier</a>
-                <a href="/note-delete?id=<?=$note['id']?>" class="btn error" onClick="return confirm('Etes vous certain de vouloir supprimer cette note !?');" >X</a>
+                <a href="/note?id=<?=$note['id']?>" class="btn btn-norm">Voir</a>
+                <a href="/note-update?id=<?=$note['id']?>" class="btn btn-norm">Modifier</a>
+                <a href="/note-delete?id=<?=$note['id']?>" class="btn btn-supp" onClick="return confirm('Etes vous certain de vouloir supprimer cette note !?');" >X</a>
             </td>
     </tr>
     <?php

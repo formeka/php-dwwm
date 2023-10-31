@@ -29,4 +29,4 @@ if ( empty($note) || $note === false ) :
     abort();
 endif;
 
-require 'views/note.view.php';
+require 'views/note/note.view.php';

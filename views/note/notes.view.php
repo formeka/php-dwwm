@@ -1,4 +1,4 @@
-<?php require 'partials/header.php' ?>
+<?php require 'views/partials/header.php' ?>
 <section class="note">
 
     <?php
@@ -16,4 +16,4 @@
 </section>
 <p><a href="/note-new" class="btn">Ajouter une note</a></p>
 
-<?php require 'partials/footer.php' ?>
+<?php require 'views/partials/footer.php' ?>
