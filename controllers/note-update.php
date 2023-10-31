@@ -23,9 +23,7 @@ ON n.user_id = u.user_id
 WHERE n.id = :id');
 
 $noteUpdate->bindParam(':id', $id);
-
 $noteUpdate->execute();
-
 $noteUpdate = $noteUpdate->fetch(); 
 
 if ( empty($noteUpdate) || $noteUpdate === false ) :
@@ -61,12 +59,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     endif;
 
     if (empty($errors)) :
-        $noteNew = $connexion->prepare('INSERT INTO note (title,content,user_id) VALUES (:title , :content , :user_id)');
+        $noteNew = $connexion->prepare('UPDATE note SET title = :title ,content = :content ,user_id = :user_id WHERE id = :id');
         
         $noteNew->bindValue(':title', $title, PDO::PARAM_STR);
         $noteNew->bindValue(':content', $content, PDO::PARAM_STR);
         $noteNew->bindValue(':user_id', $author, PDO::PARAM_INT);
-        
+        $noteNew->bindValue(':id', $id, PDO::PARAM_INT);        
         $noteNew->execute();
 
         $lastInsertId = $connexion->lastInsertId();
