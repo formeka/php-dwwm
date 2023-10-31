@@ -32,7 +32,6 @@ endif;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     $errors = [];
-    //$errors = '';
 
     $title = trim(filter_var($_POST['title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $content = trim(filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
@@ -59,21 +58,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     endif;
 
     if (empty($errors)) :
-        $noteNew = $connexion->prepare('UPDATE note SET title = :title ,content = :content ,user_id = :user_id WHERE id = :id');
+        $noteNewUpdate = $connexion->prepare('UPDATE note SET title = :title ,content = :content ,user_id = :user_id WHERE id = :id');
         
-        $noteNew->bindValue(':title', $title, PDO::PARAM_STR);
-        $noteNew->bindValue(':content', $content, PDO::PARAM_STR);
-        $noteNew->bindValue(':user_id', $author, PDO::PARAM_INT);
-        $noteNew->bindValue(':id', $id, PDO::PARAM_INT);        
-        $noteNew->execute();
+        $noteNewUpdate->bindValue(':title', $title, PDO::PARAM_STR);
+        $noteNewUpdate->bindValue(':content', $content, PDO::PARAM_STR);
+        $noteNewUpdate->bindValue(':user_id', $author, PDO::PARAM_INT);
+        $noteNewUpdate->bindValue(':id', $id, PDO::PARAM_INT);        
+        $noteNewUpdate->execute();
 
-        $lastInsertId = $connexion->lastInsertId();
-        if($lastInsertId) :
-            header('Location: /notes');
-            exit();
-        else:
-            abort();
-        endif;
+        header('Location: /notes');
+        exit();
+
     endif;
 
 endif;

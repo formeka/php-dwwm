@@ -1,7 +1,6 @@
 <?php require 'partials/header.php'; ?>
 
 <h2>Modifer cette note</h2>
-<?php dbug($noteUpdate) ?>
 <form method="POST">
     <label for="title">Titre :</label>
     <input type="text" name="title" id="title" value="<?= isset($_POST['title']) ? $_POST['title'] : $noteUpdate['title'] ?>">
