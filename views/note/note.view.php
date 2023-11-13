@@ -1,7 +1,5 @@
 <?php require 'views/partials/header.php' ?>
 
-
-
 <?php if ($note['image']) : ?>
     <p><img src="uploads/<?= $note['image'] ?>" alt=""></p>
 <?php endif; ?>
