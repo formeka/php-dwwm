@@ -6,6 +6,7 @@
         <tr>
             <th>#</th>
             <th>Id</th>
+            <th>Image</th>
             <th>Title</th>
             <th>Content</th>
             <th>User</th>
@@ -17,7 +18,14 @@
     foreach ($notes as $note) : ?>
         <tr>
             <td><?= $i ?></td>
-            <td><?= $note['id'] ?></td>
+            <td><?= $note['id'] ?></td>           
+            <td>
+                <?php if($note['image']): ?>    
+                    <img src="uploads/<?= $note['image']?>" class="imgxs">
+                <?php else: ?>
+                    ...
+                <?php endif; ?>
+            </td>
             <td><?= $note['title'] ?></td>
             <td><?= substr($note['content'],0, 20) . ' (...)' ?></td>
             <td><?= $note['name'] ?></td>

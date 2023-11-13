@@ -46,17 +46,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
         $errors[] =  "Le fichier téléversé n'est pas autorisé , seul les extensions suivantes sont autorisés :JPG, JPEG, PNG , GIF";
     endif;
 
+    if ($_FILES["image"]["size"] > 500000) {
+        $errors[] = "Le poid de l'image est supérieur";
+      }
+
     $fileError = $_FILES['image']['error'];
 
     $phpFileUploadErrors = [
-        0 => 'Aucune erreur , le fichoier est téléversé avec succés',
+        0 => 'Aucune erreur , le fichier est téléversé avec succés',
         1 => 'Le fichier téléversé  dépasse la taille autorisé par PHP',
         2 => 'Le fichier téléversé dépasse la taille autorisé par le formualire',
         3 => 'Le fichier téléversé a été partiellement téléversé',
         4 => 'Aucun fichier séléctionné',
         6 => 'Dossier temporaire manquant',
         7 => 'Echec d\'ecriture sur le disque dur',
-        8 => 'Un extension PHP a arrété le téléversement de du fichier',
+        8 => 'Un extension PHP a arrété le téléversement du fichier',
     ];
 
     if (array_key_exists($fileError, $phpFileUploadErrors)) :
@@ -68,6 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     else:
         $errors[] =  $phpFileUploadErrors[$fileError];
     endif;
+
+    //========
+    // INSERT
+    //========
 
     if (empty($errors)) :
         $noteNew = $connexion->prepare('INSERT INTO note (title,content,user_id,image) VALUES (:title , :content , :user_id, :image)');

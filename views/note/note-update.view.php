@@ -1,11 +1,21 @@
 <?php require 'views/partials/header.php'; ?>
 
 <h2>Modifer cette note</h2>
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     <label for="title">Titre :</label>
     <input type="text" name="title" id="title" value="<?= isset($_POST['title']) ? $_POST['title'] : $noteUpdate['title'] ?>">
     <label for="content">Contenu :</label>
     <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] : $noteUpdate['content'] ?></textarea>
+    
+    <!------------>
+    <!-- IMAGE -->
+    <!------------>
+    <?php if ($noteUpdate['image']) : ?>
+        <p><img src="uploads/<?= $noteUpdate['image'] ?>" alt=""></p>
+    <?php endif; ?>   
+    <label for="image">Image</label>
+    <input type="file" name="image" id="image">
+    
     <label for="author">Auteur :</label>
     <select name="author" id="author">
         <option value=""></option>
