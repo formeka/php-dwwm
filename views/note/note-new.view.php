@@ -2,7 +2,7 @@
 
 <h2>Ajout d'une nouvelle note</h2>
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     <label for="title">Titre :</label>
     <input type="text" name="title" id="title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
 
@@ -30,6 +30,8 @@
             </option>
         <?php endforeach; ?>
     </select>
+    <label for="image">Image</label>
+    <input type="file" name="image" id="image">
     <input type="submit" value="Ajouter">
 </form>
 <?php
@@ -37,7 +39,6 @@ if (isset($errors) && !empty($errors)) :
     foreach ($errors as $error) :
 ?>
     <p class="error"><?=$error?></p>    
-    <!--<p class="error"><?//=$errors?></p>-->
 <?php
         endforeach;
 endif;

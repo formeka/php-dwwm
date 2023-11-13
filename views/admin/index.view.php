@@ -1,6 +1,6 @@
 <?php require 'views/partials/header.php' ?>
 <section class="note">
-<p><a href="/note-new" class="btn">Ajouter une note</a></p>
+<p><a href="/note-new" class="btn btn-norm">Ajouter une note</a></p>
 
     <table>
         <tr>
