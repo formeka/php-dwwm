@@ -13,6 +13,7 @@ u.user_id,
 n.title,
 n.content,
 n.created_at,
+n.image,
 u.name
 FROM note AS n
 INNER JOIN user AS u 

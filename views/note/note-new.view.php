@@ -3,12 +3,27 @@
 <h2>Ajout d'une nouvelle note</h2>
 
 <form method="POST" enctype="multipart/form-data">
+    <!------------>
+    <!-- TITRE -->
+    <!------------>    
     <label for="title">Titre :</label>
     <input type="text" name="title" id="title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
 
+    <!------------>
+    <!-- CONTENU -->
+    <!------------>
     <label for="content">Contenu :</label>
     <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] : '' ?></textarea>
-    
+ 
+    <!------------>
+    <!-- IMAGE -->
+    <!------------>
+    <label for="image">Image</label>
+    <input type="file" name="image" id="image">
+
+    <!------------>
+    <!-- AUTEUR -->
+    <!------------>
     <label for="author">Auteur :</label>
     <select name="author" id="author">
         <option value=""></option>
@@ -30,8 +45,10 @@
             </option>
         <?php endforeach; ?>
     </select>
-    <label for="image">Image</label>
-    <input type="file" name="image" id="image">
+
+    <!------------>
+    <!-- SUBMIT -->
+    <!------------>
     <input type="submit" value="Ajouter">
 </form>
 <?php
