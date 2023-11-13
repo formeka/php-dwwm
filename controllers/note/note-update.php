@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
 
         $noteNewUpdate->execute();
 
-        header('Location: /notes');
+        header('Location: /admin');
         exit();
 
     endif;

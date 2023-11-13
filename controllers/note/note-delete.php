@@ -13,5 +13,5 @@ $note->bindParam(':id', $id, PDO::PARAM_INT);
 
 $note->execute();
 
-header('Location: /notes');
+header('Location: /admin');
 exit();

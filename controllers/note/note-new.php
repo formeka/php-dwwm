@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
 
         $lastInsertId = $connexion->lastInsertId();
         if($lastInsertId) :
-            header('Location: /notes');
+            header('Location: /admin');
             exit();
         else:
             abort();

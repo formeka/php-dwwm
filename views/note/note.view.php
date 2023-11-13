@@ -16,5 +16,5 @@ Supprimer cette note
 </a></p>
 </section>
 
-<p><a href="/notes" class="btn btn-norm">Retour à la liste des notes</a></p>
+<p><a href="/admin" class="btn btn-norm">Retour à la liste des notes</a></p>
 <?php require 'views/partials/footer.php' ?>
