@@ -1,3 +1,7 @@
+# Git
+
+Nombre de commit dans une dépôt : `git rev-list --count --all`
+
 # PHP
 
 [Installation XAMMP](https://www.apachefriends.org/fr/download.html)
