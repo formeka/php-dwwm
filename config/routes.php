@@ -8,4 +8,5 @@ $routes = [
     '/note-new' => 'controllers/note/note-new.php',
     '/note-update' => 'controllers/note/note-update.php',
     '/admin' => 'controllers/admin/index.php',
+    '/login' => 'controllers/login.php'
   ];
