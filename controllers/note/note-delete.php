@@ -9,7 +9,7 @@ $id = $_GET['id'];
 
 $note = $connexion->prepare('DELETE FROM note WHERE id = :id');
 
-$note->bindParam(':id', $id, PDO::PARAM_INT);
+$note->bindValue(':id', $id, PDO::PARAM_INT);
 
 $note->execute();
 
